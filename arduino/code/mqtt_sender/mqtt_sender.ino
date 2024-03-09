@@ -54,7 +54,7 @@ void publishMessage() {
   char message[50];
   sprintf(message, "Hello from Arduino at %lu", millis());
 
-  client.publish("temperature", message);
+  client.publish("temperature", message); // topic, message
   Serial.println("Message published to MQTT broker");
 }
 
