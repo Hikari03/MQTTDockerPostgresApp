@@ -12,6 +12,7 @@ services:
 
   db:
     image: postgres:alpine
+    container_name: endpoint-postgres
     volumes:
       - ./postgresql/postgresdata:/var/lib/postgresql/data
       - ./postgresql/init.sql:/docker-entrypoint-initdb.d/init.sql
