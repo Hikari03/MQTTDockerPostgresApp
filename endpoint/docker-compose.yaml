@@ -1,0 +1,27 @@
+services:
+  python:
+
+    build:
+      context: ./mqttclient
+      dockerfile: ./Dockerfile
+    container_name: mqttclient
+    restart: unless-stopped
+    volumes:
+      - ./mqttclient:/app
+    ports:
+      - "1883:1883"
+
+  db:
+    image: postgres:alpine
+    build:
+      context: ./postgresql
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./postgresql/postgresdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: varilamysickakasicku
+      POSTGRES_DB: temperature_data
+    ports:
+      - "5432:5432"
+
