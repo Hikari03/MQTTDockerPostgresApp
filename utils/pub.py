@@ -32,7 +32,7 @@ def publish(client):
     msg_count = 1
     while True:
         time.sleep(1)
-        msg = f"čau negři"
+        msg = f"čau"
         result = client.publish(topic, msg)
         # result: [0, 1]
         status = result[0]
