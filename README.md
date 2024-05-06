@@ -31,6 +31,13 @@ The broker as well as the server are containerized using docker.
 git clone https://github.com/aldudkin/MQTTDockerPostgresApp.git     # Clone the repository
 cd MQTTDockerPostgresApp/mqttbroker                                 # Go to the broker directory
 docker compose up -d                                                # Run the broker
+```
+
+By default, there should be already user `temperature` with password `varilamysickakasicku`.
+However, if you want to create a new user, you can do so by following these steps:
+
+First, enter the container shell:
+```
 docker compose exec mosquitto sh                                    # Enter the container shell
 ```
 
