@@ -28,7 +28,7 @@ The broker as well as the server are containerized using docker.
 
 #### How to run
 ```
-git clone https://github.com/aldudkin/MQTTDockerPostgresApp.git     # Clone the repository
+git clone git@github.com:aldudkin/MQTTDockerPostgresApp.git         # Clone the repository
 cd MQTTDockerPostgresApp/mqttbroker                                 # Go to the broker directory
 docker compose up -d                                                # Run the broker
 ```
@@ -56,13 +56,13 @@ docker compose restart mosquitto
 
 #### Test
 ```
-mosquitto_sub -h <BROKER_IP> -t "<TOPIC>" -u <USERNAME> -P <PASSWORD>
+mosquitto_sub -h "<BROKER_IP>" -t "<TOPIC>" -u "<USERNAME>" -P "<PASSWORD>"
 # Subscribes to the TOPIC topic
 ```
 
 And in a separate terminal:
 ```
-mosquitto_pub -h <BROKER_IP> -t "<TOPIC>" -m "<MESSAGE>" -u "<USERNAME>" -P "<PASSWORD>"
+mosquitto_pub -h "<BROKER_IP>" -t "<TOPIC>" -m "<MESSAGE>" -u "<USERNAME>" -P "<PASSWORD>"
 # Publishes a MESSAGE to the TOPIC topic
 # Password is the one you created with mosquitto_passwd
 ```
@@ -78,7 +78,7 @@ Now you should see the message you published in the first terminal.
 
 #### How to run
 ```
-git clone https://github.com/aldudkin/MQTTDockerPostgresApp.git     # Clone the repository
+git clone git@github.com:aldudkin/MQTTDockerPostgresApp.git         # Clone the repository
 cd MQTTDockerPostgresApp/endpoint                                   # Go to the server directory 
 docker compose up -d                                                # Run the server
 ```
@@ -90,13 +90,13 @@ The server is using the `temperature` topic in MQTT by default.
 
 #### Test
 ```
-mosquitto_pub -h <BROKER_IP> -t "temperature" -m "<LOCATION>:<TEMP>[,<DECIMAL>]°C" -u <USERNAME> -P <PASSWORD>
+mosquitto_pub -h "<BROKER_IP>" -t "temperature" -m "<LOCATION>:<TEMP>[.<DECIMAL>]°C" -u <USERNAME> -P <PASSWORD>
 # Password is the one you created with mosquitto_passwd
 ```
 
 To check the data in the database, you can use the following command:
 ```
-docker exec -it endpoint_db_1 sh
+docker exec -it endpoint-postgres sh
 ```
 
 Then, in container shell:
