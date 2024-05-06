@@ -38,6 +38,7 @@ connection = connect(
 log("Database opened successfully")
 cursor = connection.cursor()
 
+
 def connect_mqtt() -> mqtt_client:
     def on_connect(client, userdata, flags, rc):
         if rc == 0:
@@ -92,18 +93,7 @@ def run():
     client.loop_forever()
 
 
-# def create_table():
-#    try:
-#        cursor.execute("CREATE TABLE IF NOT EXISTS temperature_data (id SERIAL PRIMARY KEY, location VARCHAR(255), temperature_celsius FLOAT, measurement_date TIMESTAMP)")
-#        connection.commit()
-#        cursor.execute("SELECT 1 FROM temperature_data")
-#        log("Table created successfully")
-#    except Exception as e:
-#        log(f"Error: {e}")
-
-
 if __name__ == '__main__':
-   # create_table()
     run()
 
 
