@@ -17,6 +17,10 @@ The server is written in python and data is stored in a postgres database.
 
 The broker as well as the server are containerized using docker.
 
+### Scheme
+![obrazek](https://github.com/aldudkin/MQTTDockerPostgresApp/assets/39591367/71ee3f14-0a58-4f36-b702-5db2c770dee4)
+
+
 ## How to run
 
 ### Broker
