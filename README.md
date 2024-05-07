@@ -8,6 +8,8 @@ to send the information to a server that is subscribed to the broker.
 This means that you can have multiple devices sending temperature information and
 multiple servers receiving this information.
 
+**Project was created as project in FIT CTU jointly by `dudkiale` and `houdeda2`**
+
 ### Disclaimer
 
 If you want to use this project in a production environment,
