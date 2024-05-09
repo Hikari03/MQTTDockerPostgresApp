@@ -40,7 +40,7 @@ The broker as well as the server are containerized using docker.
 
 #### How to run
 ```
-git clone git@github.com:aldudkin/MQTTDockerPostgresApp.git         # Clone the repository
+git clone git@github.com:Hikari03/MQTTDockerPostgresApp.git         # Clone the repository
 cd MQTTDockerPostgresApp/mqttbroker                                 # Go to the broker directory
 docker compose up -d                                                # Run the broker
 ```
@@ -90,7 +90,7 @@ Now you should see the message you published in the first terminal.
 
 #### How to run
 ```
-git clone git@github.com:aldudkin/MQTTDockerPostgresApp.git         # Clone the repository
+git clone git@github.com:Hikari03/MQTTDockerPostgresApp.git         # Clone the repository
 cd MQTTDockerPostgresApp/endpoint                                   # Go to the server directory 
 docker compose up -d                                                # Run the server
 ```
